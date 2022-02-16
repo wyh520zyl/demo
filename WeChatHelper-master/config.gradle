@@ -1,0 +1,21 @@
+project.ext {
+
+    android = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 16,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0.0"
+    ]
+
+    constants = [
+            applicationId      : "wuge.social.com",
+            group              : "wuge.social.com",
+            WECHAT_APP_ID      : "wxc5bc2b5fd93b00e6",
+
+            SIGN_TORE_FILE_PATH: "./shejiao.keystore",
+            SIGN_STORE_PASSWORD: "wugeshejiao",
+            SIGN_KEY_ALIAS     : "wugeshejiao",
+            SIGN_KEY_PASSWORD  : "wugeshejiao"
+    ]
+}
