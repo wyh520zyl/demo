@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/quanjing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    >
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <com.baidu.mapapi.map.MapView
+                            android:id="@+id/baiduMap"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="-50dp"
+                            android:layout_marginLeft="-50dp"
+                            android:layout_marginBottom="-50dp"
+                            android:layout_marginRight="-50dp"
+                            android:clickable="true" >
+
+                        </com.baidu.mapapi.map.MapView>
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="-15dp"
+                                android:background="@drawable/defaultcluster"
+                                >
+                            </ImageView>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:background="#fff"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/dizhi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="是的哇的撒福娃">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/jingdu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="大大大大撒无法发">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/weidu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="倒萨我发顺丰">
+                        </TextView>
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginBottom="5dp"-->
+                        <!--                            android:text="的撒达娃大撒">-->
+                        <!--                        </TextView>-->
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <com.baidu.lbsapi.panoramaview.PanoramaView
+                android:id="@+id/panorama"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </com.baidu.lbsapi.panoramaview.PanoramaView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="bottom|right"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/soushuo"
+                android:background="@drawable/fanhui"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+              >
+            </ImageButton>
+        </LinearLayout>
+    </RelativeLayout>
