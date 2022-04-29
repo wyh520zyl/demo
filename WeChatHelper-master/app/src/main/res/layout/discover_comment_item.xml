@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+    <wuge.social.com.view.EasySwipeMenuLayout
+        android:id="@+id/es"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/discover_comment_item_part_delete">
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wuge_banner"
+            android:orientation="horizontal"
+            android:padding="20dp">
+            <wuge.social.com.view.CircleImageView
+                android:id="@+id/discover_comment_item_heading"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                />
+            <TextView
+                android:id="@+id/discover_comment_item_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_toEndOf="@+id/discover_comment_item_heading"
+                android:layout_marginStart="10dp"
+                tools:ignore="UnknownIdInLayout" />
+            <TextView
+                android:id="@+id/discover_comment_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="9sp"
+                android:layout_alignStart="@+id/discover_comment_item_nickname"
+                android:layout_below="@+id/discover_comment_item_nickname"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/discover_comment_item_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discover_comment_item_time"
+                android:layout_marginTop="14.5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_alignStart="@+id/discover_comment_item_nickname"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/discover_comment_item_part_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/discover_comment_item_part_delete_text"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:background="@drawable/discover_issue"
+                android:padding="20dp"
+                android:text="@string/room_delete"
+                android:focusable="true" />
+        </LinearLayout>
+    </wuge.social.com.view.EasySwipeMenuLayout>
+</LinearLayout>

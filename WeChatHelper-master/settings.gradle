@@ -1,1 +1,6 @@
 include ':app', ':wechathelper'
+include ':magicindicator'
+include ':tkbanner'
+include ':library'
+include ':livepermissions'
+include ':download'

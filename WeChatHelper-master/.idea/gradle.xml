@@ -7,15 +7,22 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="16" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/download" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/livepermissions" />
+            <option value="$PROJECT_DIR$/magicindicator" />
+            <option value="$PROJECT_DIR$/tkbanner" />
             <option value="$PROJECT_DIR$/wechathelper" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
+    <option name="offlineMode" value="true" />
   </component>
 </project>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    tools:ignore="RtlSymmetry">
+    <FrameLayout
+        android:id="@+id/message_recommend_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wuge_banner">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_people_nearby"
+            android:textSize="22sp"
+            android:layout_marginTop="13.5dp"
+            android:layout_marginStart="14.5dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/black">
+        </TextView>
+        <FrameLayout
+            android:id="@+id/item_screen_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="right|center_vertical"
+            tools:ignore="RtlHardcoded">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="12dp"
+                android:background="@mipmap/message_recommend_screen"
+                tools:ignore="ContentDescription">
+            </ImageView>
+        </FrameLayout>
+    </FrameLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center_vertical">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="right"-->
+    <!--            android:paddingRight="20dp">-->
+    <!--            <ImageView-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:background="@drawable/recommend">-->
+    <!--            </ImageView>-->
+    <!--        </LinearLayout>-->
+    <!--    </LinearLayout>-->
+    <GridView
+        android:id="@+id/recommend_gridView"
+        android:layout_width="match_parent"
+        android:verticalSpacing="5dp"
+        android:layout_marginTop="5dp"
+        android:scrollbars="none"
+        android:layout_below="@+id/message_recommend_headline"
+        android:layout_height="match_parent">
+    </GridView>
+    <ImageView
+        android:id="@+id/recommend_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/message_chat_null_information"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+    <LinearLayout
+        android:id="@+id/message_recommend_screen_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/message_recommend_headline"
+        android:layout_alignEnd="@+id/message_recommend_headline"
+        android:background="@mipmap/message_recommend_headline"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/message_recommend_see_schoolgirl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/message_recommend_see_schoolgirl"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/message_recommend_headline">
+        </TextView>
+        <TextView
+            android:id="@+id/message_recommend_see_schoolboy"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/message_recommend_see_schoolboy"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/message_recommend_headline">
+        </TextView>
+        <TextView
+            android:id="@+id/message_recommend_see_all"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/message_recommend_see_all"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/message_recommend_headline">
+        </TextView>
+    </LinearLayout>
+</RelativeLayout>

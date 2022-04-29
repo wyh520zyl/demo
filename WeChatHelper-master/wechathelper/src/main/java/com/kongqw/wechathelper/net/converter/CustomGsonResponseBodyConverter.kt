@@ -10,7 +10,7 @@ import java.io.InputStreamReader
 
 class CustomGsonResponseBodyConverter<T>(private val gson: Gson, private val adapter: TypeAdapter<T>) : Converter<ResponseBody, T> {
 
-    @Throws(IOException::class)
+    @kotlin.jvm.Throws(IOException::class)
     override fun convert(value: ResponseBody): T? {
         val response = value.string().trim()
         // response = response.replace("null", "\"\"", true)

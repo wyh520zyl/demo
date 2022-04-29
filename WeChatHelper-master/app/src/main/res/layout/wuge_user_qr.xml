@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="343dp"
+        android:background="@drawable/message_nearby_item_background"
+        tools:ignore="UselessParent">
+        <FrameLayout
+            android:id="@+id/qr_layout"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/qr_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_below ="@+id/qr_layout"
+        android:layout_centerHorizontal="true"
+       >
+        <wuge.social.com.view.CircleImageView
+            android:id="@+id/qr_my_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+        </wuge.social.com.view.CircleImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wuge_user_qr"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:textColor="@color/personal_essential_information"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -7,7 +7,9 @@ object Logger {
 
     fun d(log: String?) {
         if (WeChatHelper.IS_LOGGABLE) {
-            Log.d("Logger", log)
+            if (log != null) {
+                Log.d("Logger", log)
+            }
         }
     }
 }

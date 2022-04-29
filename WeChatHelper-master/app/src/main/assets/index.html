@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=431fbb7b09a71a171661e8ab401ff868&plugin=Map3D"></script>
+    <script src="//a.amap.com/jsapi_demos/static/demo-center/model/js/three.js"></script>
+    <script src="//a.amap.com/jsapi_demos/static/demo-center/model/js/loaders/MTLLoader.js"></script>
+    <script src="//a.amap.com/jsapi_demos/static/demo-center/model/js/loaders/LoaderSupport.js"></script>
+    <script src="//a.amap.com/jsapi_demos/static/demo-center/model/js/loaders/OBJLoader2.js"></script>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+    <script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/demo-center/js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/demo-center/js/underscore-min.js" ></script>
+    <script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/demo-center/js/backbone-min.js" ></script>
+    <script type="text/javascript" src='https://a.amap.com/jsapi_demos/static/demo-center/js/prety-json.js'></script>
+
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+    var lt;
+    var la;
+    var center;//104.064633,30.700225];
+    var map = new AMap.Map('container',{
+        viewMode:'3D',
+        showBuildingBlock:false,
+        center:center,
+        pitch:70,
+        resizeEnable: true,
+        zooms:[15,20],
+        mapStyle: 'amap://styles/26fafedf37fde7eaaccd97a3076558a6', //设置地图的显示样式
+    });
+    var object3Dlayer = new AMap.Object3DLayer();
+    map.AmbientLight = new AMap.Lights.AmbientLight([1,1,1],1);
+    map.DirectionLight = new AMap.Lights.DirectionLight([1,0,-0.5],[1,1,1],1);
+    var loadModel = function () {
+        var modelName = 'building';
+        var scope = this;
+        var objLoader = new THREE.OBJLoader2();
+        var callbackOnLoad = function ( event ) {
+            var meshes = event.detail.loaderRootNode.children;
+            for(var i=0;i<meshes.length;i++){
+                var vecticesF3 = meshes[i].geometry.attributes.position;
+                var vecticesNormal3 = meshes[i].geometry.attributes.normal;
+                var vecticesUV2 = meshes[i].geometry.attributes.uv;
+                var vectexCount =  vecticesF3.count;
+                mesh = new AMap.Object3D.MeshAcceptLights();
+                var geometry = mesh.geometry;
+                //底部一圈
+                // debugger
+                var c,opacity;
+                var material = meshes[i].material[0]||meshes[i].material;
+                // debugger
+                if(material.map)
+                    mesh.textures.push('https://aple.wgzy88.com/konfujpg.jpg')
+                c = material.color;
+                opacity = material.opacity
+                // debugger
+                for(var j=0;j<vectexCount;j+=1){
+                    var s = j*3;
+                    geometry.vertices.push(vecticesF3.array[s],vecticesF3.array[s+2],-vecticesF3.array[s+1]);
+
+                    if(vecticesNormal3) {
+                        geometry.vertexNormals.push(vecticesNormal3.array[s],vecticesNormal3.array[s+2],-vecticesNormal3.array[s+1]);
+                    }
+                    if(vecticesUV2) {
+                        geometry.vertexUVs.push(vecticesUV2.array[j*2],1-vecticesUV2.array[j*2+1]);
+                    }
+                    geometry.vertexColors.push(c.r,c.g,c.b,opacity)
+                }
+                // debugger
+                mesh.DEPTH_TEST = material.depthTest
+                // mesh.backOrFront = 'both'
+                mesh.transparent = opacity<1;
+                mesh.scale(0.05,0.05,0.05)
+                mesh.rotateZ(-48)
+                mesh.position(new AMap.LngLat(104.094633,30.700225))
+                mesh.id=89
+                object3Dlayer.add(mesh)
+            }
+            map.add(object3Dlayer)
+        };
+        var onLoadMtl = function ( materials ) {
+            // for(var i=0;i<materials.length;i+=1){
+            // 	materials[i].side=2;
+            // }
+            objLoader.setModelName( modelName );
+            objLoader.setMaterials( materials );
+            objLoader.load( 'https://aple.wgzy88.com/konfu.obj', callbackOnLoad, null, null, null, false );
+        };
+        objLoader.loadMtl( 'https://aple.wgzy88.com/konfu.mtl', null, onLoadMtl );
+    };
+
+
+    // 点击事件
+    map.on('click', function (ev) {
+        var pixel = ev.pixel;
+        var px = new AMap.Pixel(pixel.x, pixel.y);
+        var obj = map.getObject3DByContainerPos(px, [object3Dlayer], false) || {};
+        // 选中的 object3D 对象，这里为当前 Mesh
+        var object = obj.object;
+        if (object!==undefined){
+            window.android.jsCallAndroidArgs(object.id);
+            console.log("当前位置店铺id1111"+object.id);
+        }else {
+            window.android.jsCallAndroidArgs();
+            console.log("当前位置没有店铺")
+        }
+    });
+    loadModel()
+
+    //获取当前地图中心位置
+    map.on('moveend', logMapinfo);
+    function logMapinfo(){
+        var center1 = map.getCenter();
+        console.log(center1)
+        var str="地图中心点:"+center1;
+        console.log(str.toString());
+       // window.android.jsCallAndroidArgs(str);
+        console.log("当前位置经纬度："+str);
+        AMap.plugin('AMap.Geocoder', function() {
+            var geocoder = new AMap.Geocoder({
+                // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode
+                city: '010'
+            })
+            var lnglat = center1;
+            geocoder.getAddress(lnglat, function(status, result) {
+                if (status === 'complete' && result.info === 'OK') {
+                    var sd=result.regeocode;
+                    var sd1=sd.addressComponent;
+                    var sd2=sd1.district;
+                    console.log("当前区县："+la);
+                    console.log("当前中心点所在区县："+sd2);
+                    if(la!=null){
+                        if(sd2!=la){
+                            console.log("当前中心点不在："+lt);
+                                var str=(lt.toString()).split(",");
+                                var lng = str[0] ; //经度范围[121.138398, 121.728226]
+                                var lat = str[1] ; //纬度范围[30.972688, 31.487611]
+                                center=[lng+","+lat];
+                                console.log("当前中心点不在1："+center);
+                                map.setCenter([lng, lat]); //设置地图中心点
+                                console.log("重新设置中心点完成："+center);
+                        }else {
+                            lt=center1;
+                            console.log("保存上一次地图中心点："+lt);
+                        }
+                    }
+                }
+            })
+        })
+    };
+
+
+    //与Android交换的方法
+    function javacalljs(){
+        // document.getElementById("showmsg").innerHTML = "JAVA调用了JS的无参函数";
+    }
+    function javacalljswith(arg){
+        //  document.getElementById("showmsg").innerHTML = (arg);
+        console.log("js跨境:"+arg);
+        //var strs = new Array(); //定义一数组
+        var strs = arg.split("->"); //字符分割
+        console.log("strs[1]："+strs[1]);
+        if(strs[0]=="跨境"){
+            console.log("当前位置店铺id1111"+strs[0]);
+            var star=strs[1].split(",");
+            var lng = star[0] ; //经度范围[121.138398, 121.728226]
+            var lat = star[1] ; //纬度范围[30.972688, 31.487611]
+            center=[lng+","+lat];
+            map.setCenter([lng, lat]); //设置地图中心点
+            map.setZoomAndCenter(17);//设置缩放级别
+        }else if(strs[0]=="定位"){
+            console.log("开始设置js地图中心点:"+strs[1]);
+            var star=strs[1].split(",");
+            var lng = star[0] ; //经度范围[121.138398, 121.728226]
+            var lat = star[1] ; //纬度范围[30.972688, 31.487611]
+            center=[lng+","+lat];
+            map.setCenter([lng, lat]); //设置地图中心点
+            map.setZoomAndCenter(17);//设置缩放级别
+            window.android.jsCallAndroidArgs("定位");
+        }
+    }
+</script>
+
+</body>
+</html>

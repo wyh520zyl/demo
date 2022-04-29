@@ -6,7 +6,6 @@ apply plugin: 'kotlin-android-extensions'
 
 def BuildConfig = rootProject.ext.android
 def BuildConstants = rootProject.ext.constants
-
 android {
     compileSdkVersion BuildConfig["compileSdkVersion"]
 
@@ -21,20 +20,55 @@ android {
         manifestPlaceholders = [
                 WECHAT_APP_ID: BuildConstants["WECHAT_APP_ID"]
         ]
-
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
         signingConfigs {
             sign {
                 storeFile file(BuildConstants["SIGN_TORE_FILE_PATH"])
                 storePassword BuildConstants["SIGN_STORE_PASSWORD"]
                 keyAlias = BuildConstants["SIGN_KEY_ALIAS"]
                 keyPassword BuildConstants["SIGN_KEY_PASSWORD"]
+                File file = project.rootProject.file('local.properties');
+                def needLog = null
+                if (file.exists()) {
+                    Properties p = new Properties()
+                    p.load(file.newDataInputStream())
+                    needLog = p.getProperty("needLog")
+                }
+                buildConfigField "boolean", "DOWNLOAD_NEED_LOG", needLog == "true" ? "true" : "false"
             }
             debug.initWith(sign)
         }
+        ndk {
+            abiFilters "armeabi-v7a",  "x86"//,'armeabi'
+        }
+
+        vectorDrawables.useSupportLibrary = true
+        sourceSets {
+            main {
+                jniLibs.srcDir 'libs'
+            }
+        }
+
+        File file = project.rootProject.file('local.properties');
+        def needLog = null
+        if (file.exists()) {
+            Properties p = new Properties()
+            p.load(file.newDataInputStream())
+            needLog = p.getProperty("needLog")
+        }
+        buildConfigField "boolean", "DOWNLOAD_NEED_LOG", needLog == "true" ? "true" : "false"
     }
     buildTypes {
         release {
             minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.sign
         }
@@ -42,7 +76,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.sign
+
         }
+    }
+    lintOptions {
+        // This seems to be firing due to okio referencing java.nio.File
+        // which is harmless for us.
+        warning 'InvalidPackage'
     }
 }
 
@@ -52,9 +92,67 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation files('libs\\AMap3DMap_7.2.1_AMapNavi_7.2.0_AMapSearch_7.1.0_AMapLocation_4.8.0_20200115.jar')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.github.getActivity:XXPermissions:11.5'
+    implementation 'com.github.maning0303:MNProgressHUD:V2.0.0X'
+    //微信登录
     implementation project(path: ':wechathelper')
+
+    implementation project(path: ':download')
+
+    //im
+    implementation 'com.tencent.imsdk:tuikit:4.9.1'
+
+    //Restful网络请求框架
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //网络请求
+    implementation ("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor")
+
+    //权限
+    implementation project(path: ':livepermissions')
+
+    //json动图加载
+    implementation 'com.airbnb.android:lottie:3.3.1'
+
+    //Glide图片加载
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    //轮播图
+    implementation project(':tkbanner')
+    implementation 'com.kongpf.commonhelper:common-helper:1.0.21'
+
+    //侧向滑动
+    implementation "com.google.android.material:material:1.3.0"
+
+    //页面指示器
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+
+    //好友列表数据解析
+    implementation files('libs\\pinyin4j-2.5.0.jar')
+
+    implementation project(':library')
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.exifinterface:exifinterface:1.2.0'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.15'
+    implementation 'com.github.yalantis:ucrop:2.2.4'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.facebook.fresco:fresco:2.0.0'
+    implementation 'com.facebook.fresco:animated-gif:2.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    debugImplementation 'cn.dreamtobe.threaddebugger:threaddebugger:1.3.3'
+    releaseImplementation 'cn.dreamtobe.threaddebugger:threaddebugger-no-op:1.3.3'
 }

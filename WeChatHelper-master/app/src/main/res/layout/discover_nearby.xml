@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:background="@color/background_page"
+    tools:ignore="ResourceName">
+<!--    <wuge.social.com.discover.refresh.RefreshListView-->
+<!--        android:id="@+id/discover_nearby_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:divider="@color/background_page"-->
+<!--        android:dividerHeight="14dp"-->
+<!--        android:scrollbars="none"-->
+<!--        android:layout_marginLeft="15dp"/>-->
+
+    <ImageView
+        android:id="@+id/discover_nearby_image"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/message_chat_null_information"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
+<!--    <LinearLayout-->
+<!--        android:id="@+id/discover_nearby_comment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@drawable/message_friends_addfriend_edit">-->
+<!--        <EditText-->
+<!--            android:id="@+id/discover_nearby_edit"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:hint="@string/edit_comment"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:background="@color/friends_addfriend_edit"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        </EditText>-->
+<!--        <Button-->
+<!--            android:id="@+id/discover_nearby_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="发送">-->
+<!--        </Button>-->
+<!--    </LinearLayout>-->
+</RelativeLayout>

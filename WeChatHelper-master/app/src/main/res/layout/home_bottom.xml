@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:baselineAligned="false">
+
+    <RelativeLayout
+        android:id="@+id/id_tab_WeChat"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/wuge_image"
+            android:layout_width="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:src="@mipmap/navigation_wuge_not"
+            android:contentDescription="@string/app_name"
+            android:clickable="false"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/wuge_json"
+            android:layout_width="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="24dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="wuge.json"/>
+
+        <TextView
+            android:id="@+id/txt_wuge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="物格"
+            android:layout_below="@id/wuge_json"
+            android:clickable="false"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_tab_Frd"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/message_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:src="@mipmap/navigation_message_not"
+            android:clickable="false"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/message_json"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="news.json"/>
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="消息"
+            android:layout_below="@id/message_json"
+            android:clickable="false"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_tab_Contacts"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/discover_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/navigation_discvoery_not"
+            android:clickable="false"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/discover_json"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="disc.json"/>
+        <TextView
+            android:id="@+id/txt_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/discover_json"
+            android:text="发现"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_tab_Settings"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/my_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/navigation_my_not"
+            android:clickable="false"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/my_json"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="my.json"/>
+        <TextView
+            android:id="@+id/txt_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/my_json"
+            android:clickable="false"
+            android:text="我的" />
+    </RelativeLayout>
+</LinearLayout>

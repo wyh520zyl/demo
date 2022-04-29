@@ -1,6 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="start_up_background">#346af7</color>
+    <color name="colortab">#000fff</color>
+    <color name="tabSelectedTextColor" >#f2bc44</color>
+    <color name="gray">#6C6C6C</color>
+    <color name="white">#ffffff</color>
+    <color name="gray1">#d7d7d7</color>
+    <color name="cut_off_rule">#f4f4f4</color>
+    <color name="black">#000000</color>
+    <color name="shadow">#f0f0f0</color>
+    <color name="grade_colors">#777b87</color>
+    <color name="class_back">#fff032</color>
+    <color name="individuality_save">#736bf6</color>
+    <color name="signin_btn_text">#f4b70c</color>
+    <color name="yellow">#CC9966</color>
+    <color name="dim_yellow">#663300</color>
+    <color name="green">#33FF99</color>
+    <color name="shop_color">#AD563D</color>
+    <color name="delete_friend">#D55047</color>
+    <color name="message_red">#ff0000</color>
+    <color name="message111_red">#f9f9f9</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#00FF00</color>
+    <color name="bg_floder_press">#bdbdbd</color>
+    <color name="my_exit_prngram_color">#FF9999</color>
+    <color name="wuge_name_color">#494949</color>
+    <color name="wuge_gold_num">#797979</color>
+    <color name="navigation_text_color_not">#BFBFBF</color>
+    <color name="friend_play">#252525</color>
+    <color name="background_page">#f5f5f5</color>
+    <color name="task_item_schedule">#242424</color>
+    <color name="pageadapter_not">#535353</color>
+    <color name="message_chat_tablayout_underline">#326bf7</color>
+    <color name="message_chat_nearby_item_name">#434343</color>
+    <color name="message_recommend_headline">#353535</color>
+    <color name="wuge_sign_week">#6B6B6B</color>
+    <color name="personal_essential_information">#999999</color>
+    <color name="personal_essential_headline">#416AEE</color>
+    <color name="message_friends_addfriend_edit_id">#B1B1B1</color>
+    <color name="discover_give">#999</color>
+    <color name="friends_addfriend_edit">#F6F7F9</color>
+    <color name="sign_item">#eeeeee</color>
+    <color name="sign_btn_ok">#f29444</color>
+    <color name="sign_solar">#fefefe</color>
+    <color name="discover_item_part_edit">#666666</color>
+    <color name="my_class_title">#3d454b</color>
+    <color name="my_class">#4A69E5</color>
+    <color name="login_yiwuyige">#D4DAE6</color>
+    <color name="login_shejiaotiandi">#939AA8</color>
+    <color name="confirm_background">#ff8c2e</color>
+    <color name="asd">#5A6677</color>
+    <color name="adssd">#a6a6a6</color>
+
+    <color name="sl_custom_primary">#3F51B5</color>
+    <color name="sl_custom_primary_dark">#303F9F</color>
+
+    <color name="sl_toolbar_bg_custom">#3F51B5</color>
+    <color name="sl_toolbar_title_custom">@android:color/white</color>
+    <color name="sl_toolbar_done_custom">#FF4081</color>
+
+    <color name="sl_folder_item_bg_custom">@android:color/white</color>
+    <color name="sl_folder_item_name_custom">#FF222222</color>
+    <color name="sl_folder_item_size_custom">#FF979A9E</color>
+    <color name="sl_folder_item_divider_custom">#FFBCBFC5</color>
+
+    <color name="sl_detail_bg_custom">#88FF4081</color>
+    <color name="sl_detail_toolbar_bg_custom">#FF111111</color>
+    <color name="sl_detail_toolbar_title_custom">#FF6300</color>
+    <color name="sl_80000000">#80000000</color>
+
+    <!--Crop View-->
+    <color name="sl_color_default_crop_grid">#80ffffff</color>
+    <color name="sl_color_default_crop_frame">#ffffff</color>
+    <color name="sl_crop_color_default_dimmed">#8c000000</color>
+    <color name="ucrop_color_default_logo">#4f212121</color>
+
+
+    <!--Palette-->
+    <color name="ucrop_color_black">#000</color>
+    <color name="ucrop_color_blaze_orange">#FF6300</color>
+    <color name="ucrop_color_ebony_clay">#20242F</color>
+    <color name="ucrop_color_heather">#B3BECE</color>
+    <color name="ucrop_color_white">#FFF</color>
+
+    <!--uCrop Activity-->
+    <color name="ucrop_color_toolbar">@color/ucrop_color_white</color>
+    <color name="ucrop_color_statusbar">#f5f5f5</color>
+    <color name="ucrop_color_toolbar_widget">@color/ucrop_color_black</color>
+    <color name="ucrop_color_widget">@color/ucrop_color_black</color>
+    <color name="ucrop_color_widget_active">@color/ucrop_color_white</color>
+    <color name="ucrop_color_active_controls_color">@color/ucrop_color_blaze_orange</color>
+    <color name="ucrop_color_inactive_controls_color">@color/ucrop_color_heather</color>
+    <color name="ucrop_color_widget_rotate_mid_line">@color/ucrop_color_blaze_orange</color>
+    <color name="ucrop_color_widget_rotate_angle">@color/ucrop_color_ebony_clay</color>
+    <color name="ucrop_color_active_aspect_ratio">@color/ucrop_color_blaze_orange</color>
+    <color name="ucrop_color_inactive_aspect_ratio">@color/ucrop_color_ebony_clay</color>
+    <color name="ucrop_color_widget_background">@color/ucrop_color_ebony_clay</color>
+    <color name="ucrop_color_widget_text">@color/ucrop_color_blaze_orange</color>
+    <color name="ucrop_color_progress_wheel_line">@color/ucrop_color_ebony_clay</color>
+    <color name="ucrop_color_crop_background">@color/ucrop_color_black</color>
+
+    <!--Crop View-->
+    <color name="ucrop_color_default_crop_grid">#80ffffff</color>
+    <color name="ucrop_color_default_crop_frame">#ffffff</color>
+    <color name="ucrop_color_default_dimmed">#8c000000</color>
+    <color name="theme_white_primary">#FFFFFF</color>
+    <color name="theme_white_dark">#FFFFFF</color>
+    <color name="theme_white_accent">#000000</color>
+
+    <color name="theme_blue_primary">#2196F3</color>
+    <color name="theme_blue_dark">#1976D2</color>
+    <color name="theme_blue_accent">#FF4081</color>
+
+    <color name="theme_orange_primary">#FF5722</color>
+    <color name="theme_orange_dark">#E64A19</color>
+    <color name="theme_light_blue_accent">#FF4081</color>
+
+    <color name="theme_cyan_primary">#00BCD4</color>
+    <color name="theme_cyan_dark">#0097A7</color>
+    <color name="theme_cyan_accent">#FF4081</color>
+
+    <color name="theme_green_primary">#4CAF50</color>
+    <color name="theme_green_dark">#388E3C</color>
+    <color name="theme_green_accent">#FF4081</color>
+
+    <color name="theme_teal_primary">#009688</color>
+    <color name="theme_teal_dark">#00796B</color>
+    <color name="theme_teal_accent">#FF4081</color>
+
+    <color name="theme_red_primary">#da4336</color>
+    <color name="theme_red_dark">#b93221</color>
+    <color name="theme_red_accent">#3D5AFE</color>
+
+    <color name="theme_pink_primary">#E91E63</color>
+    <color name="theme_pink_dark">#C2185B</color>
+    <color name="theme_pink_accent">#3D5AFE</color>
+
+    <color name="theme_purple_primary">#673AB7</color>
+    <color name="theme_purple_dark">#512DA8</color>
+    <color name="theme_purple_accent">#FF4081</color>
+
+    <color name="theme_grey_primary">#616161</color>
+    <color name="theme_grey_dark">#424242</color>
+    <color name="theme_grey_accent">#00E676</color>
+
+    <color name="theme_black_primary">#2A2A2F</color>
+    <color name="theme_black_dark">#151515</color>
+    <color name="theme_black_accent">#FF4081</color>
+
+    <color name="theme_brown_primary">#785447</color>
+    <color name="theme_brown_dark">#5C3F36</color>
+    <color name="theme_blown_accent">#785447</color>
+
 </resources>

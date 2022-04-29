@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/wuge_banner"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+    <TextView
+        android:id="@+id/my_set_hint_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:layout_marginTop="37dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp">
+        <TextView
+            android:id="@+id/my_set_confirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@drawable/establish_room_game_cancel"
+            android:textSize="15sp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+
+            android:text="@string/set_confirm"
+            android:gravity="center"
+           />
+        <TextView
+            android:id="@+id/my_set_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:paddingTop="13dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:text="@string/discover_cancel"
+            android:background="@drawable/establish_room_game_cancel"
+            android:paddingBottom="13dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+</LinearLayout>

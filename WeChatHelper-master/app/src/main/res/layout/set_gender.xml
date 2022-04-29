@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/personal_set_gender"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+        <TextView
+            android:id="@+id/information_gender_set_boy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="@string/information_set_boy">
+        </TextView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/personal_set_separate"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/information_gender_set_girl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="@string/information_set_girl"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/personal_set_separate"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/information_gender_set_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#AAAAAA"
+            android:textSize="15.14sp"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="@string/discover_cancel"/>
+</LinearLayout>

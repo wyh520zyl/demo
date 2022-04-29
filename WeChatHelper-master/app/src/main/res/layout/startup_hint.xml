@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/message_nearby_item_background"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/startup_activity_privacy_policy_headline"/>
+    <TextView
+        android:id="@+id/remove_chat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/startup_activity_privacy_policy_text1"
+        />
+    <TextView
+        android:id="@+id/startup_user_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/startup_activity_privacy_policy_text2"
+        />
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content">-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/startup_activity_privacy_policy_text2"-->
+    <!--                >-->
+    <!--            </TextView>-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/startup_user_agreement"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:textColor="#132456"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/main_login_user_agreement"-->
+    <!--                >-->
+    <!--            </TextView>-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/main_login_sum"-->
+    <!--                >-->
+    <!--            </TextView>-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/startup_privacy_policy"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:textColor="#132456"-->
+    <!--                android:text="@string/main_login_privacy_policy"-->
+    <!--                >-->
+    <!--            </TextView>-->
+    <!--        </LinearLayout>-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="                                                                       了解详细信息。如果你同意，请点击\'同意\'开始接受我们的服务 "-->
+    <!--            >-->
+    <!--        </TextView>-->
+    <!--    </RelativeLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:baselineAligned="false">
+        <RelativeLayout
+            android:id="@+id/Layout_btn_not"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/remove_chat_btn_not"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startup_activity_privacy_policy_not"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#4C6EF6"
+                android:gravity="center"
+                android:background="@drawable/set_social_status_cancel"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/remove_chat_btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startup_activity_privacy_policy_ok"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/set_social_status_confirm"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

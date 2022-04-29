@@ -12,7 +12,7 @@ import java.nio.charset.Charset
 
 class CustomGsonRequestBodyConverter<T>(private val gson: Gson, private val adapter: TypeAdapter<T>) : Converter<T, RequestBody> {
 
-    @Throws(IOException::class)
+    @kotlin.jvm.Throws(IOException::class)
     override fun convert(value: T): RequestBody {
         val buffer = Buffer()
         val writer = OutputStreamWriter(buffer.outputStream(), UTF_8)

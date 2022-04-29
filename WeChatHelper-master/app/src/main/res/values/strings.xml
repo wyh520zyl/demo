@@ -1,3 +1,353 @@
-<resources>
-    <string name="app_name">WeChatHelper</string>
+<resources translatable="false" xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+    <string name="app_name"  translatable="false">物格社交</string>
+    <string name="main_login_user_agreement_left" translatable="false">登陆即代表你已阅读并同意</string>
+    <string name="main_login_user_agreement" translatable="false"> 《用户使用协议》 </string>
+    <string name="main_login_sum" translatable="false">和</string>
+    <string name="main_login_privacy_policy" translatable="false"> 《隐私政策》 </string>
+    <string name="main_login_underway" translatable="false">正在跳转</string>
+    <string name="wuge_money" translatable="false">$ :</string>
+    <string name="wueg_friend_play" translatable="false">好友在玩</string>
+    <string name="wuge_more" translatable="false">更多</string>
+    <string name="my_knapsack" translatable="false">背包</string>
+    <string name="my_advise" translatable="false">提意见</string>
+    <string name="my_room" translatable="false">房间</string>
+    <string name="my_update" translatable="false">更新</string>
+    <string name="my_set" translatable="false">设置</string>
+    <string name="map_search_this_city" translatable="false">当前城市：</string>
+    <string name="map_search_shop" translatable="false">店铺搜索</string>
+    <string name="map_search_street" translatable="false">街道搜索</string>
+    <string name="map_search_wuge_master" translatable="false">物格主人搜索</string>
+    <string name="map_edit_search" translatable="false">search</string>
+    <string name="map_search_go" translatable="false">前 往</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="map_nickname" translatable="false">昵称：</string>
+    <string name="map_cross_border" translatable="false">跨境</string>
+    <string name="map_whether_to" translatable="false">是否前往</string>
+    <string name="map_ok" translatable="false">确认</string>
+    <string name="map_shop_nickname" translatable="false">店铺名称:</string>
+    <string name="map_shop_manager_name" translatable="false">店长姓名:</string>
+    <string name="map_door_message" translatable="false">门牌信息:</string>
+    <string name="map_shop_photo" translatable="false">联系电话:</string>
+    <string name="map_shop_site" translatable="false">地理位置:</string>
+    <string name="map_wuge_master" translatable="false">物格主人:</string>
+    <string name="wuge_jiantou" translatable="false"><![CDATA[>]]></string>
+    <string name="wuge_map" translatable="false">地图</string>
+    <string name="message_photo" translatable="false">相册</string>
+    <string name="message_scan_qr" translatable="false">扫描二维码</string>
+    <string name="navigation_wuge" translatable="false">物格</string>
+    <string name="navination_message" translatable="false">消息</string>
+    <string name="navination_discover" translatable="false">发现</string>
+    <string name="navigation_my" translatable="false">我的</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="discover_dis" translatable="false">发现</string>
+    <string name="about_text" translatable="false">This application allows you to load 3D object models (currently only Wavefront, Stereolithography and Collada formats are supported).\n\nThe purpose of this application is to learn how to draw in android using the OpenGL 2.0 language.\n\nThe code for this application is open source and it can be found at https://github.com/andresoviedo/android-3D-model-viewer\n\nAs this is my first android app and Im still learning the OpenGL 2.0 language, it is highly probable that there are bugs; but I will try to continue improving the app.\n\nThe included models in the app were taken for free from Internet.\n\nThis application does not collect or make use of any kind of personal information.\n\nAny comments, suggestions, contributions, complains or donations are welcome. Feel free to contact me at andresoviedo@gmail.com.\n\nhttp://www.andresoviedo.org</string>
+    <string name="help_text" translatable="false">Load Model\n\nLoad the samples included with the app (Samples), github repository (Repository) or download them to your device and open it (using File or Android Explorer)\n\nSupported formats\n\nOnly wavefront, stereolithography or Collada files (*.obj, *.stl, *.dae) are currently supported.\n\nDemo\n\nExample scene using the API. It loads several models using different draw modes, colors, textures, etc.\n\nRenderer\n\nOnce you load a model, you can pinch to zoom, translate the camera with your finger and rotate the screen with 2 fingers\n\nToolbar\n\nIn the action bar you will also find several buttons for toggling different draw modes like wireframe or points, enabling or disabiling lights, textures or animation.\n\nTroubleshooting\n\nIf the model file (.obj) is referencing any materials file (*.mtl) be sure its in the same folder; same applies for texture files (*.jpg, *.bmp) being referenced in the material file.\n\nIf you need more help or have any issue feel free to open a ticket in github or ask me. Thank you in advance for your feedback.\n\nhttps://github.com/andresoviedo/android-3D-model-viewer/issues\n\nandresoviedo@gmail.com</string>
+    <string-array name="menu_items">
+        <item>Load Model</item>
+        <!--<item>Models</item>-->
+        <item>Demo</item>
+        <item>Help</item>
+        <item>About</item>
+        <!--<item>GitHub</item>-->
+        <item>Exit</item>
+    </string-array>
+    <string name="model_name" translatable="false">Model name</string>
+    <string name="texture" translatable="false">Texture</string>
+    <string name="invert_texture_coordinates" translatable="false">Invert texture coordinates</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="title_activity_model" translatable="false">Model</string>
+    <string name="load" translatable="false">Load</string>
+    <string name="load_model" translatable="false">Load Model</string>
+
+    <!-- Scene settings -->
+    <string name="scene" translatable="false">Scene...</string>
+    <!-- GL Settings -->
+    <string name="toggle_wireframe" translatable="false">Toggle wireframe</string>
+    <string name="toggle_textures" translatable="false">Toggle textures</string>
+    <string name="toggle_lights" translatable="false">Toggle lights</string>
+    <string name="toggle_animation" translatable="false">Toggle animation</string>
+    <!--<string name="toggle_skeleton">Toggle skeleton</string>-->
+    <string name="toggle_boundingbox" translatable="false">Toggle bounding box</string>
+    <string name="load_texture" translatable="false">Load texture</string>
+
+    <!-- To review -->
+    <string name="app_logo_desc" translatable="false">Teapot animated logo</string>
+    <string name="wuge_task" translatable="false">任务</string>
+    <string name="wuge_room" translatable="false">房间</string>
+    <string name="wuge_sign_in" translatable="false">签到</string>
+    <string name="wuge_game" translatable="false">圈地</string>
+    <string name="wuge_task_title" translatable="false">任务中心</string>
+    <string name="message_people_nearby" translatable="false">附近的人</string>
+    <string name="message_recommend_see_schoolboy" translatable="false">只看男生</string>
+    <string name="message_recommend_see_schoolgirl" translatable="false">只看女生</string>
+    <string name="message_recommend_see_all" translatable="false">查看全部</string>
+    <string name="wuge_sign_headline" translatable="false">签到</string>
+    <string name="wuge_sign_week_sunday" translatable="false">日</string>
+    <string name="wuge_sign_week_monday" translatable="false">一</string>
+    <string name="wuge_sign_week_tuesday" translatable="false">二</string>
+    <string name="wuge_sign_week_wednesday" translatable="false">三</string>
+    <string name="wuge_sign_week_thursday" translatable="false">四</string>
+    <string name="wuge_sign_week_friday" translatable="false">五</string>
+    <string name="wuge_sign_week_saturday" translatable="false">六</string>
+    <string name="personal_information_set" translatable="false">设置</string>
+    <string name="personal_essential_ID" translatable="false">ID:</string>
+    <string name="personal_essential_age" translatable="false">年龄:</string>
+    <string name="personal_essential_meili" translatable="false">魅力值:</string>
+    <string name="personal_essential_social_status">身价:</string>
+    <string name="personal_essential_constellation">星座:</string>
+    <string name="personal_essential_class">用户等级:</string>
+    <string name="personal_essential_photo">相册</string>
+    <string name="personal_essential_personalized_signature">个签</string>
+    <string name="friends_addfriend_headline">添加好友</string>
+    <string name="message_friend_addfriend_seach">搜索</string>
+    <string name="message_friends_addfriend_my_qr">我的二维码</string>
+    <string name="message_friends_addfriend_edit">请输入用户ID</string>
+    <string name="message_friends_addfriend_floor">扫一扫</string>
+    <string name="discover_issue">发布</string>
+    <string name="message_friends_edit">搜索</string>
+    <string name="message_new_friend">新的好友</string>
+    <string name="sign_in_btn">签到</string>
+    <string name="sign_note">注：节气的转换涉及到不定的时辰，并不是按照0点转换。</string>
+    <string name="discover_cancel">取消</string>
+    <string name="discover_item_all_comment">全部评论</string>
+    <string name="edit_comment">请输入你想说的</string>
+    <string name="discover_item_part_details">详情</string>
+    <string name="my_class">等级</string>
+    <string name="my_social">身价</string>
+    <string name="my_charm">魅力值</string>
+    <string name="my_personal_homepage_image">个人主页</string>
+    <string name="my_name_card">我的名片</string>
+    <string name="knapsack_my_knapsack">我的背包</string>
+    <string name="personal_phone">手机号</string>
+    <string name="personal_qr_business_card">二维码名片</string>
+    <string name="personal_id">用户ID</string>
+    <string name="personal_nickname">昵称</string>
+    <string name="personal_head">头像</string>
+    <string name="personal_sex">性别</string>
+    <string name="personal_birthday">生日</string>
+    <string name="personal_constellation">星座</string>
+    <string name="personal_region">地区</string>
+    <string name="personal_personalized_signature">个性签名</string>
+    <string name="set_nickname">设置昵称</string>
+    <string name="set_confirm">确定</string>
+    <string name="set_new_nickname">请输入新的昵称</string>
+    <string name="information_set_boy">男</string>
+    <string name="information_set_girl">女</string>
+    <string name="wuge_user_qr">扫一扫二维码，加我好友</string>
+    <string name="set_social_status">请输入您的身价值</string>
+    <string name="set_status">设置身价</string>
+    <string name="personal_add_friend">加好友</string>
+    <string name="login_yiwuyige">一物一格</string>
+    <string name="login_shejiaotiandi">社交天地</string>
+    <string name="discover_report_content">举报内容</string>
+    <string name="discover_report_submit">提交</string>
+    <string name="report_else">其它</string>
+    <string name="report_rumour">造谣</string>
+    <string name="report_money_swindle">涉及金额诈骗</string>
+    <string name="report_bloodiness">涉黄/血腥暴力</string>
+    <string name="report_politics">涉及政治</string>
+    <string name="comment_send">发送</string>
+    <string name="knapsack_click">点击使用</string>
+    <string name="knapsack_period_start">起始时间：</string>
+    <string name="knapsack_period_finish">结束时间：</string>
+    <string name="friend_nickname_set">修改备注</string>
+    <string name="friend_blacklist_set">加入黑名单</string>
+    <string name="friend_report_set">举报此用户</string>
+    <string name="friend_delete">删除好友</string>
+    <string name="my_set_message">消息设置</string>
+    <string name="my_set_privacy">隐私设置</string>
+    <string name="my_set_clear_cache">清理缓存</string>
+    <string name="my_set_clear_chatting">清理聊天记录</string>
+    <string name="my_set_real_name">实名认证</string>
+    <string name="my_set_regard_wuge">关于物格</string>
+    <string name="my_set_opinion_feedback">意见反馈</string>
+    <string name="my_set_privacy_policy">隐私政策</string>
+    <string name="my_set_adolescent">青少年模式</string>
+    <string name="my_set_exit_program">退出登录</string>
+    <string name="set_privacy_add_black_list_hint">其他人在“附近”将看不到你的动态</string>
+    <string name="set_privacy_appear_nearby">不出现在附近</string>
+    <string name="set_privacy_administration_black_list">管理黑名单</string>
+    <string name="black_list_remove">移出</string>
+    <string name="set_message_voice">声音</string>
+    <string name="set_message_shake">震动</string>
+    <string name="room_establish">创建房间</string>
+    <string name="room_search">搜索房间</string>
+    <string name="room_my_room">我的房间</string>
+    <string name="room_establish_next">下一步</string>
+    <string name="room_patten">房间模式</string>
+    <string name="room_name">房间名称</string>
+    <string name="room_import_name">请输入房间名</string>
+    <string name="room_game_person_num">游玩人数</string>
+    <string name="room_game_award">游玩奖励</string>
+    <string name="my_class_activity">我的等级</string>
+    <string name="set_autonym_name">姓名</string>
+    <string name="set_autonym_note">注: 认证消息一经认证，不可修改，请认真填写</string>
+    <string name="set_autonym_identity_card">请输入身份证号</string>
+    <string name="identity_card">身份证号</string>
+    <string name="set_autonym_name_hint">请输入您的真实姓名</string>
+    <string name="set_adolescent">青少年模式</string>
+    <string name="set_adolescent_one_text">青少年模式是我们针对青少年的身心健康成长做出的一次尝试，为了确保青少年有一个良好的生活作息，自每晚22时到第二天清晨7时，这个阶段内，青少年们均无法正常登录使用物格社交。</string>
+    <string name="set_adolescent_two_text">开启青少年模式，需要设置独立密码，如果忘记密码可以通过申诉重置密码。</string>
+    <string name="set_adolescent_open_password">设置密码</string>
+    <string name="set_adolescent_open_hint">启动青少年模式，需先设置独立密码</string>
+    <string name="set_adolescent_close_hint">请输入密码确认</string>
+    <string name="set_adolescent_close_password">关闭青少年模式</string>
+    <string name="set_adolescent_forget_about">忘记了？</string>
+    <string name="set_adolescent_retrieve_password_text">找回密码</string>
+    <string name="my_set_real_name_ok">已完成实名认证</string>
+    <string name="set_adolescent_change_password">修改密码</string>
+    <string name="set_adolescent_this_password">请输入当前密码</string>
+    <string name="room_establish_yes">创建成功</string>
+    <string name="room_ok_get_into">进入大厅</string>
+    <string name="room_ok_share">分享</string>
+    <string name="room_ok_hint_text">创建成功！你的房间ID是</string>
+    <string name="room_delete">删除</string>
+    <string name="permission_title_rationale">权限需求</string>
+    <string name="permission_read_storage_rationale">选择图片时需要读取权限</string>
+    <string name="permission_write_storage_rationale">拍照时需要存储权限</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_ok">确定</string>
+    <string name="photograph">拍照</string>
+    <string name="Determine_the_choice">确定选择</string>
+    <string name="hint">提示</string>
+    <string name="adolescent_hint">为呵护未成年人健康成长，物格社交特别推出青少年模式，该模式下部分功能无法正常使用。请监护人主动选择，并设置监护密码。</string>
+    <string name="adolescent_go">进入青少年模式》</string>
+    <string name="adolescent_got_it">我知道了</string>
+    <string name="room_search_edit">请输入房间号</string>
+    <string name="discover_load_more">加载更多...</string>
+    <string name="photo_all">所有图片</string>
+    <string name="all_photo">全部图片</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="select_room_clase">选择房间类型</string>
+    <string name="from_photo_get">从相册选择</string>
+    <string name="this_charm_value">当前魅力值</string>
+    <string name="charm_value_explain">魅力值是动态所收获的点赞数</string>
+    <string name="got_it">知道了</string>
+    <string name="integral_gain">积分获取</string>
+    <string name="matters_need_attention">注意事项</string>
+    <string name="my_class_matters_need_attention_one">1:升级时会清空经验条</string>
+    <string name="compile_social_status">编辑身价</string>
+    <string name="edit_social_status">请输入您的身价值</string>
+    <string name="social_status_explain">身价是对方添加好友所需金币数</string>
+    <string name="accomplish">完成</string>
+    <string name="please_choose">请选择</string>
+    <string name="set_game_award" translatable="false">设置游玩奖励</string>
+    <string name="go_room"  translatable="false">跟房</string>
+    <string name="set_versions_update" translatable="false">版本更新</string>
+    <string name="update_explain">更新说明:</string>
+    <string name="update_time">更新时间:</string>
+    <string name="update_package">包大小:</string>
+    <string name="update_version">版本:</string>
+    <string name="download_and_install">下载并安装</string>
+    <string name="startup_activity_privacy_policy_headline">服务协议和隐私政策</string>
+    <string name="startup_activity_privacy_policy_text1">请您务必审慎阅读、充分理解"服务协议"和"隐私政策"各条款，包括但不限于为你提供即时通讯、内容分享等服务，我们需要收集你的设备信息、操作日志等个人信息。你可以在"设置"中查看、变更、删除个人信息并管理你的授权。</string>
+    <string name="startup_activity_privacy_policy_text2">你可阅读《用户使用协议》和《隐私政策》了解详细信息。如果你同意，请点击\'同意\'开始接受我们的服务</string>
+    <string name="startup_activity_privacy_policy_ok">同意</string>
+    <string name="startup_activity_privacy_policy_not">暂不使用</string>
+    <string name="time_format">yyyy-MM-dd</string>
+
+    <string name="select_mode">Select Mode</string>
+    <string name="mode_single">Single-Choice</string>
+    <string name="mode_multi">Multi-Choice</string>
+    <string name="max_select_amount">Max Selected Amount</string>
+    <string name="hint_default_amount">default amount is 9</string>
+    <string name="hint_default_image_count">default amount is 3</string>
+    <string name="enable_camera">Enable Camera</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="theme">Theme Select</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_custom">Custom</string>
+    <string name="go_select">Select</string>
+    <string name="open_camera_only">Open Camera Only</string>
+    <string name="max_image_span_count">image span count</string>
+    <string name="open_video">Video Select</string>
+
+    <string name="test_crop">Test Crop</string>
+    <string name="label_aspect_ratio">Aspect ratio</string>
+    <string name="label_freestyle_crop">Freestyle crop</string>
+    <string name="label_dynamic">Dynamic</string>
+    <string name="label_image_source">Image source</string>
+    <string name="label_square">Square</string>
+    <string name="label_max_cropped_image_size">Max cropped image size</string>
+    <string name="label_resize_image_to_max_size">Resize image to max size</string>
+    <string name="label_width" tools:ignore="MissingTranslation">Width</string>
+    <string name="label_height" translatable="false">Height</string>
+    <string name="label_compression_settings">Compression settings</string>
+    <string name="label_hide_bottom_ui_controls">Hide bottom UI controls</string>
+
+    <string name="sl_menu_crop">Crop</string>
+    <string name="crop">比例</string>
+    <string name="rotate">旋转</string>
+    <string name="scale">缩放</string>
+    <string name="sl_label_original">Original</string>
+
+
+
+    <string name="lfrecyclerview_header_hint_normal">下拉刷新</string>
+    <string name="lfrecyclerview_header_hint_ready">松开刷新数据</string>
+    <string name="lfrecyclerview_header_hint_loading">正在加载...</string>
+    <string name="lfrecyclerview_header_last_time">上次更新时间：</string>
+    <string name="lfrecyclerview_footer_hint_normal">查看更多</string>
+    <string name="lfrecyclerview_footer_hint_ready">松开载入更多</string>
+    <string name="lfrecyclerview_header_hint_success">刷新成功</string>
+    <string name="lfrecyclerview_header_hint_failt">刷新失败</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+
+
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="delete">Delete</string>
+
+    <string name="del_cache_files">Delete all downloaded files</string>
+    <string name="del_file_error_empty">Empty folder already</string>
+
+    <string name="single_task_test_title">Single task test</string>
+    <string name="performance_test_title">Performance test</string>
+    <string name="performance_test_parcel">100000(times) Basic performance test</string>
+    <string name="performance_test_output">Output performance test</string>
+
+
+    <string name="tasks_manager_demo_title">Tasks Manager Demo</string>
+    <string name="tasks_manager_demo_name" formatted="false">task: %d</string>
+    <string name="tasks_manager_demo_status_loading">Status: loading...</string>
+    <string name="tasks_manager_demo_status_pending">Status: pending</string>
+    <string name="tasks_manager_demo_status_started">Status: started</string>
+    <string name="tasks_manager_demo_status_connected">Status: connected</string>
+    <string name="tasks_manager_demo_status_progress">Status: progressing</string>
+    <string name="tasks_manager_demo_status_downloading" formatted="false">Status: downloading %d</string>
+    <string name="tasks_manager_demo_status_error">Status: error</string>
+    <string name="tasks_manager_demo_status_paused">Status: paused</string>
+    <string name="tasks_manager_demo_status_completed">Status: completed</string>
+    <string name="tasks_manager_demo_status_not_downloaded">Status: has not downloaded</string>
+
+    <!-- hybrid test -->
+    <string name="hybrid_test_title">Hybrid test</string>
+    <string name="hybrid_test_deleted_file" formatted="false">Deleted: %s</string>
+    <string name="hybrid_test_start_single_task" formatted="false">Start single task: %s</string>
+    <string name="hybrid_test_start_multiple_tasks_parallel" formatted="false">Start %d tasks to download in parallel</string>
+    <string name="hybrid_test_start_multiple_tasks_serial" formatted="false">Start %d tasks to download linearly</string>
+    <string name="hybrid_test_multiple_tasks_parallel_title">Execute multiple tasks in parallel</string>
+    <string name="hybrid_test_multiple_tasks_serial_title">Execute multiple tasks linearly</string>
+    <string name="hybrid_test_single_task_title">Execute single task</string>
+    <string name="avoid_missing_screen_frames">Avoid Missing Screen Frames</string>
+
+    <!-- notification demo -->
+    <string name="notification_demo_title">Notification Demo</string>
+
+    <string name="notification_sample_title">Notification Sample Demo</string>
+    <string name="notification_sample_desc">This is notification sample demo, in this demo, we show the downloading information in the notification panel and Activity. Every downloading task has a notification item in the notification panel and we will hold them after finishing download. In the meantime, there is a indeterminate progress bar in the activity to indicate the whole process of download.</string>
+    <string name="notification_sample_show">Show the Notification</string>
+
+    <string name="notification_min_set_title">Notification MinSet Demo</string>
+    <string name="notification_min_set_desc">This is notification min set demo, it means that we use as little as possible code to bind notification with downloading tasks.</string>
+
+    <!-- multitask test -->
+    <string name="multitask_test_title">Multiple tasks test</string>
+
 </resources>
